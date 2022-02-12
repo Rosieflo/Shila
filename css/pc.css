@@ -1,0 +1,772 @@
+@charset "utf-8";
+
+@media screen and (min-width:1000px) {
+
+/* 토글메뉴 보이지 않기 */
+.total_btn{
+  display:none;
+}
+
+
+/* 헤더 영역 */
+header{
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+}
+
+#logo{
+  width:16.7%;
+  height:98px;
+  float:left;
+  text-align: center;
+  position:relative;
+  top:40px;
+  left:3.4%;
+}
+
+#box1{
+  width: 100%;
+  height: 36px;
+  background-color: #49423a;
+}
+
+.lnb{
+  width:28%;
+  position:absolute;
+  right:16%;
+  top:2px;
+}
+
+
+/* 상단 검색창 */
+form{display:block;}
+
+input{
+    width: 9.5%;
+    border: 1px solid #49423a;
+    border-radius: 4px;
+    background-color: rgba(255, 255,255,0.8);
+    position: absolute;
+    top:5px;
+    right: 4.79%;
+    padding: 4px 0;
+}
+
+form > input:hover{background-color: rgba(255, 255,255,1);}
+
+form > a > img{
+    position: absolute;
+    top: 10px;
+    right:5.2%;
+    z-index: 2;
+}
+
+
+
+#box1 .lnb > ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+#box1 .lnb > ul > li {
+  font-size:0.8rem;
+  line-height: 31px;
+  color:rgb(221, 221, 221);}
+
+#box1 .lnb > ul > li >a{
+  color: rgb(221, 221, 221);
+  text-transform: uppercase;
+  line-height: 31px;
+  font-size:0.8rem;
+}
+
+
+/* 2단 네비 */
+#box2{
+  width: 100%;
+  height: 146px;
+}
+#box2 .gnb{
+  position: relative;
+  top:61px;
+}
+#box2 .gnb > ul{
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  width:68.1%;
+  float:right;
+  position: relative;
+  right: 2.34%;
+  top:13px;
+}
+#box2 .gnb > ul > li{
+  color:#49423a;
+  position:relative;
+  line-height:35px;
+}
+#box2 .gnb > ul > li >a{
+  font-size: 1.25rem;
+  color:#49423a;
+}
+#box2 .gnb > ul > li >a:hover{
+  color:#fff;
+  transition: 0.4s;    
+}
+
+/* 2단 네비 서브 */
+.sub{
+  width:100%;
+  position:absolute;
+  display:none;
+}
+.sub > li{
+  text-align: center;
+}
+.sub > li > a{
+  font-size:0.85rem;
+  line-height:40px;
+}
+.sub > li > a:hover{
+  color:#49423a;
+  transition: 0.4s;
+  display:block;
+  background: #fff;
+}
+/* 메인메뉴에 마우스 오버시 해당 서브메뉴만 나오게 하기 */
+#box2 > .gnb > ul > li:hover > .sub{
+  display:block;
+  transition: 0.4s;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+/* 메인 슬라이드 서식 */
+#slide{position: relative;}
+
+#slide > h2{display: none;}
+
+#slide .slide_b{
+    width: 84.1%;
+    /* margin: 0px auto; */
+    position: absolute;
+    z-index: 5;
+    top:45%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+/* 방향버튼 서식 */
+.slide_b a{position: absolute;}
+.slide_b a:first-child{left: 0%;}
+.slide_b a:last-child{right: 0%;}
+
+.slide_b a:first-child::before{
+    content: "";
+    background-image: url('../imges/slide_bl.png');
+    width: 66px; height: 66px;
+    display:inline-block;
+}
+
+.slide_b a:last-child::before{
+    content: "";
+    background-image: url('../imges/slide_b.png');
+    width: 66px; height: 66px;
+    display:inline-block;
+}
+
+
+
+/* 예약 영역 */
+
+/* HOTEL 버튼 */
+#slide .res1 > .res_b1 > a{
+    width:50%;
+    height:48px;
+    background: #a99d8d;
+    color:#49423a;
+    font-size:1.6rem;
+    text-align: center;
+    position:absolute;
+    padding-top:18px;
+}
+
+#slide .res1 > .res_b1 > a:hover{
+    color:#fff;
+    background:#49423a ;
+    transition:all ease 0.5s;
+}
+
+/* STAY 버튼 */
+#slide .res1 > .res_b2 > a{
+    width:50%;
+    height:48px;
+    background: #a99d8d;
+    color:#49423a;
+    font-size:1.6rem;
+    text-align: center;
+    position:absolute;
+    right:0%;
+    border-left:1px solid #49423a;
+    padding-top:18px;
+}
+
+#slide .res1 > .res_b2 > a:hover{
+    color:#fff;
+    background:#49423a ;
+    transition:all ease 0.5s;
+}
+
+#slide .res1{
+    display: block;
+    width:26.04%;
+    height:500px;
+    background-color: #fff;
+    position:absolute;
+    right:14.3%;
+    top:400px;
+    box-shadow:10px 10px 50px -20px #3b3b3b;
+    z-index:2;
+}
+
+#slide > .res1 > .res1_1{
+    width:73.8%;
+    padding-top:125px;
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size:1.25rem;
+    color:#a99d8d;
+    border-bottom:1px solid #49423a;
+    margin:0px auto;
+}
+
+#slide > .res1 > .res1_1 > a{
+    position: absolute;
+    right:16.4%;
+}
+
+#slide > .res1 > .res1_2{
+    width:73.8%;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size:1.25rem;
+    color:#a99d8d;
+    border-bottom:1px solid #49423a;
+    margin:0px auto;
+}
+
+#slide > .res1 > .res1_2 > a{
+    position: absolute;
+    right:15%;
+}
+
+#slide > .res1 > .res1_3{
+    width:73.8%;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size:1.25rem;
+    text-align: center;
+    color:#a99d8d;
+    border-bottom:1px solid #49423a;
+    margin:0px auto;
+}
+
+.count{
+    padding:0 2.2%;
+    color:#49423a;}
+
+#slide > .res1 > .res1_3 > ul > li{display:inline-block;}
+
+
+#slide > .res2{
+    display: block;
+    width: 3.6%;
+    height: 66px;
+    background-color: #fff;
+    position:absolute;
+    right: 40.3%;
+    top:400px;
+}
+
+#slide .main_s{width: 100%;}
+
+
+
+/* 예약하기 버튼 */
+#slide > .res1 > .res1_4{
+    font-size:1.4rem;
+    text-align: center;
+    color:#fff;
+    margin:0px auto;
+    margin-top:65px;
+    position:relative;
+}
+
+#slide > .res1 > .res1_4 > a{
+    color:#fff;
+    padding:20px 27.8%;
+    background-color: #49423a;
+}
+
+
+
+/* Top 버튼 */
+aside{    
+          width:4%;
+          height: 300px;
+          text-align: center;
+          position:fixed; 
+          right: 5%;
+          bottom: 55px;
+          z-index: 10;
+}
+
+aside > a{
+    width:80px;
+    height:80px;
+    display:inline-block;
+    background-color: #49423a;
+    color:#fff;
+    text-decoration: none;
+    font-size:1.25rem;
+    line-height:80px;
+    border-radius:50%;
+    position: relative;
+    top:210px;
+    transition: 0.5s;
+  }
+
+  aside > a:hover{
+    top:180px;
+    transition: 0.5s;
+    background-color: #a99d8d;
+    color:#49423a;
+  }
+
+
+
+
+
+
+/* 메인 컨텐츠 서식 시작 */
+#box3{width:100%}
+  
+/* 스페셜 오퍼 */
+#s_offer{
+    width: 71.7%;
+    height: 700px;
+    margin:0px auto;
+    padding: 130px 0% 100px 0%;
+    position: relative;
+}
+
+#s_offer > .s_offerimg{
+    position: absolute;
+    width: 66.61%;
+}
+
+#s_offer > .offer_box > a{
+    display:inline-block;
+    padding-left:2.8%;
+}
+
+#s_offer > h2{
+    font-size:30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#s_offer .s_title{
+    color:#49423a;
+    font-size:2.3rem;
+    font-weight: bold;
+    display:block;
+    padding:24px 0% 0 0%;
+    display:inline-block;
+}
+
+#s_offer .description{
+    color:#49423a;
+    font-size: 0.94rem;
+    line-height: 22px;
+    display:block;
+    padding:20px 0% 13px 0%;
+}
+
+#s_offer > ul{position: relative;}
+
+#s_offer > ul > li > a{
+    position: absolute;
+    bottom:30px;
+    right:3.25%;
+}
+#s_offer > ul > li:first-child{
+    position: absolute;
+    top:20px;
+    z-index: 1;
+}
+
+#s_offer > ul > li:last-child{
+    position: absolute;
+    top:-20px;
+    right:0%;
+    z-index: 0;
+}
+
+
+
+/* 객실안내 */
+#rooms{
+    width: 71.7%;
+    height: 670px;
+    margin:0px auto;
+    padding: 100px 0%;
+    position:relative;
+}
+
+#rooms > .rooms_img{
+    position: absolute;
+    width: 60.9%;
+}
+
+#rooms > .rooms_img2{
+    position: absolute;
+    width: 30.09%;
+}
+
+#rooms > h2{
+    font-size:30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#rooms .r_title{
+    color:#49423a;
+    font-size:2.3rem;
+    font-weight: bold;
+    display:block;
+    padding:24px 0% 0 0%;
+    display:inline-block;
+}
+
+#rooms > .room_box > a{
+    display:inline-block;
+    padding-left:2.8%;
+}
+
+#rooms .description{
+    color:#49423a;
+    font-size: 0.94rem;
+    line-height: 22px;
+    display:block;
+    padding:20px 0% 5px 0%;
+}
+
+#rooms > ul{
+    display:flex;
+}
+
+#rooms > ul > li:first-child > a{
+    position:absolute;
+    bottom:20px;
+    right:42.5%;
+}
+
+#rooms > ul > li:last-child > a{
+    position:absolute;
+    bottom:20px;
+    right:3%;
+}
+
+.r_txt1{
+    width:18.5%;
+    position: relative;
+    top:585px;
+    left:5.5%;
+    background-color:rgba(179, 170, 161, 0.7);
+    font-weight: bold;
+    text-align: center;
+    font-size:1.1rem;
+    color:#fff;
+    padding:0.38%;
+}
+
+.r_txt2{
+    width:23.3%;
+    position: relative;
+    top:585px;
+    left:7.4%;
+    background-color:rgba(36, 8, 2, 0.7);
+    font-weight: bold;
+    text-align: center;
+    font-size:1.1rem;
+    color:#fff;
+    padding:0.58%;
+}
+
+
+/* 이용시설 */
+.box4{
+    position: relative;
+    top:-135px;
+}
+
+.box4 > a{
+    display:inline-block;
+    padding-left:2.8%;
+}
+
+#fac{
+    width: 71.7%;
+    height: 720px;
+    padding-top: 130px;
+    margin:0px auto;
+    position:relative;
+}
+
+#fac > h2{
+    font-size:30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#fac .f_title{
+    color:#49423a;
+    font-size:2.3rem;
+    font-weight: bold;
+    display:block;
+    padding:24px 0% 0 0%;
+    display:inline-block;
+}
+
+#fac .description{
+    color:#49423a;
+    font-size: 0.94rem;
+    line-height: 22px;
+    display:block;
+    padding:20px 0% 5px 0%;
+}
+
+#fac > ul{display:flex;}
+
+#fac > ul > li > .img4{padding-top:20px;}
+
+#fac > ul > li:first-child > a{display: none;}
+
+.img3{
+    padding:67px 0% 0 0%;
+    width:41.72%;
+}
+
+.f_txt1{
+    color:#fff;
+    position: absolute;
+    top:597px;
+    left:18.5%;
+}
+
+.f_txt2{
+    color:#fff;
+    font-size: 1.75rem;
+    position: absolute;
+    top:615px;
+    left:14.9%;
+}
+
+.f_txt3{
+    color:#fff;
+    position: absolute;
+    top:255px;
+    right:3.1%;
+}
+
+.f_txt4{
+    color:#fff;
+    font-size: 1.75rem;
+    position: absolute;
+    top:272px;
+    right:2.8%;
+}
+
+
+/* 웨딩과 연회 */
+#wed{
+    width: 71.7%;
+    height: 730px;
+    margin:0px auto;
+    padding-top: 165px;
+    position:relative;
+}
+
+#wed > ul > li > a{
+    position:absolute;
+    top:195px;
+    right:31.1%;
+}
+
+#wed > .box5{
+    position: absolute;
+    top:164px;
+    right:1.84%;
+}
+
+#wed > h2{
+    font-size:30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#wed .w_title{
+    color:#49423a;
+    font-size:2.3rem;
+    font-weight: bold;
+    display:block;
+    padding:24px 0% 0 0%;
+    display:inline-block;
+}
+
+#wed .description1{
+    color:#49423a;
+    font-size: 0.94rem;
+    line-height: 26px;
+    display:block;
+    padding:20px 0% 5px 0%;
+}
+
+.box5 > a{
+    display:inline-block;
+    padding:0 0% 0 29px;
+}
+
+#wed .description2{display:none;}
+
+#wed > ul{display:flex;}
+
+.img4{
+    padding:410px 0 0 0;
+}
+
+.box5 > .tablet_t2{display: none;}
+
+
+/* 신라리워즈 */
+#rewards{
+    width:100%;
+    padding: 80px 0% 5% 0%;
+    position: relative;
+}
+
+#rewards > .box6{
+    width: 71.7%;
+    margin:0px auto;
+}
+
+.box6 > a{
+    display:inline-block;
+    padding-left:2.8%;
+}
+
+.re_title{
+    color:#49423a;
+    font-size:2.4rem;
+    font-weight: bold;
+    display:block;
+    padding:24px 0 0 0;
+    display:inline-block;
+}
+
+.description{
+    color:#49423a;
+    font-size:0.95rem;
+    line-height: 26px;
+    display:block;
+    padding:20px 0 28px 0;
+}
+
+ .box6_2 > .re_b{width: 100%;}
+
+ .box6_1 > .re_img{
+    width: 42.7%;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%)
+ }
+
+ #rewards .re_b{width: 100%;}
+
+ 
+ /* 푸터 영역 */
+footer{
+    width: 100%;
+    background-color: #f2e3c4;
+}
+
+ #box7{
+    width:71.15%;
+    height: 300px;
+    margin:0px auto;
+    background-color: #f2e3c4;
+    position: relative;
+  }
+  
+  .f_logo{
+    width:10%;
+    position:absolute;
+    top:16px;
+    left:35%;
+  }
+  
+  #box7 .f_nav > ul {
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    width:80%;
+    height:60px;
+    line-height:60px;    
+    position:absolute;
+    left:10%;
+    top:105px;
+    border-bottom: 1px solid rgb(255, 255, 255);    
+  }
+  
+  #box7 .f_nav > ul > li > a{
+    font-size:14px;
+    font-weight: bold;
+    color:rgb(139, 139, 139);
+  }
+  
+  #box7 .f_nav > ul > li > a:hover{
+    color:#49423a;
+    transition: 0.3s;
+  }
+  
+  .f_ad{
+    width:80%;
+    height:60px;
+    color: rgb(139, 139, 139);
+    line-height:23px;
+    font-size:0.8rem;
+    position:absolute;
+    bottom:55px;
+    left:13.3%;
+  }
+  
+  .f_sns{
+    width:18%;
+    height:60px;
+    color: #49423a;
+    line-height:30px;
+    font-size:13px;
+    position:absolute;
+    bottom:43px;
+    right:3.7%;
+  }
+  
+  .f_sns > a{padding-right: 8.6%;}
+  
+}
